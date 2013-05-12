@@ -1,0 +1,10 @@
+kendoctor_node:
+    resource: "@KendoctorNodeBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    
+
+login_check:
+  pattern: /login_check
+logout:
+  pattern: /logout
