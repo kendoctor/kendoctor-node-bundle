@@ -1,0 +1,42 @@
+{% extends 'KendoctorNodeBundle::layout.html.twig' %}
+
+{% block body -%}
+
+<div id="homePlans" class="clearfix">
+    <div id="homePlansContent">
+        <div id="content_nav">    
+            <h2> {{ category.name }}</h2>
+            <ul>
+                {% for page in category.pages %}
+                    <li><a href="{{ path('page_show', {id:page.id}) }}">{{ page.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="main_body">
+        <h1>{{ entity.title }}</h1>
+
+        <table class="record_properties">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ entity.id }}</td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td>{{ entity.title }}</td>
+                </tr>
+                <tr>
+                    <th>Slug</th>
+                    <td>{{ entity.slug }}</td>
+                </tr>
+                <tr>
+                    <th>Body</th>
+                    <td>{{ entity.body }}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    
+    </div>
+</div>
+{% endblock %}

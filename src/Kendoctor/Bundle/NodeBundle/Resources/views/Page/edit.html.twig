@@ -1,0 +1,55 @@
+{% extends 'KendoctorNodeBundle:Page:admin.layout.html.twig' %}
+
+{% block body -%}
+<div id="main_body">
+    <h1>Page edit</h1>
+        <style>
+.blockFocus {  }
+.focus { border:3px solid brown }
+input.editingField {width:100%;}
+textarea.editingField {width:100%;height:300px;}
+
+</style>
+
+<script>
+    $(function() {
+        
+        $("#doc").kendocumentor({
+            titleFieldSelector: '#kendoctor_bundle_nodebundle_pagetype_title',
+            bodyFieldSelector: '#kendoctor_bundle_nodebundle_pagetype_body',
+            formSelector: '.document-form'
+        });
+});
+</script>
+
+
+
+    <form class="document-form" action="{{ path('page_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+        <input type="hidden" name="_method" value="PUT" />
+        {{ form_widget(edit_form) }}
+          <div id="doc">
+
+
+    </div>
+        <p>
+            <button type="submit">Edit</button>
+        </p>
+    </form>
+
+  
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('page') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <form action="{{ path('page_delete', { 'id': entity.id }) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+            {{ form_widget(delete_form) }}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul></div>
+{% endblock %}

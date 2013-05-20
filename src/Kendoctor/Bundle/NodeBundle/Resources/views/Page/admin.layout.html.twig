@@ -1,0 +1,18 @@
+{% extends 'KendoctorNodeBundle::admin.layout.html.twig' %}
+
+{% block sidebar %}
+
+
+<ul class="nav nav-list">
+    <li class="nav-header">Pages Management</li>
+    <li><a href="{{ path("page_new") }}">Create a new page</a></li>
+    <li class="active"><a href="{{ path("page") }}">List pages</a></li>
+    <li><a href="{{ path("pagecategory_new") }}">Create a page category</a></li>
+    <li><a href="{{ path("pagecategory") }}">List categories</a></li>
+</ul>
+
+{% endblock %}
+
+{% block body -%}
+
+{% endblock %}

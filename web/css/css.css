@@ -1,0 +1,17 @@
+/* 
+    Document   : css
+    Created on : May 13, 2013, 3:51:24 AM
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#content_nav {
+    float:left;
+    width: 180px;
+    
+}
+
+#main_body {
+    margin-left: 180px;
+}

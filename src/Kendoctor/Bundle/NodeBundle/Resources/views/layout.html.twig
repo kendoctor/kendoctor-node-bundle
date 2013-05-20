@@ -6,9 +6,38 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="{{ asset("css/main.css") }}" type="text/css" />
+        <link rel="stylesheet" href="{{ asset("css/css.css") }}" type="text/css" />
     </head>
     <body>
+        <style>
+#utilnav li a { font-size:10px; }
+#topnav { margin-top:22px }
+html, body { font-family:微软雅黑 }
+
+</style>
+<div id="head">
+    <div id="headContainer" class="container">
+        <ul id="utilnav">
+            <li id="toggle"><a href="">Login</a></li>
+            <li><a href="">Eng</a></li>
+            <li><a href="">中文</a></li>
+        </ul>
+        <ul id="topnav">
+            <li><a href="{{ path('homepage') }}">首页</a></li>
+            <li><a href="">博客</a></li>
+            <li><a href="">产品</a></li>
+            <li><a href="">技术</a></li>
+            <li><a href="">服务流程</a></li>
+            <li><a href="">关于我们</a></li>
+        </ul>                  
+        <div id="homeclick"></div>
+    </div>
+</div>
+
         {% block body %}{% endblock %}
+<div id="footer">
+    <div id="footercontainer" class="container">Copyright Reserved!</div>
+</div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

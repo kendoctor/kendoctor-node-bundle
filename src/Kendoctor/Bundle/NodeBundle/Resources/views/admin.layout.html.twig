@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset("css/bootstrap.min.css") }}" media="screen" type="text/css" />  
+        <link rel="stylesheet" href="{{ asset("css/kendocumentor.css") }}" media="screen" type="text/css" />       
+
+        <script type="text/javascript" src="{{ asset("js/jquery.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("js/jquery.hotkeys.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("js/jquery.json2.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("js/jquery.extend.js") }}"></script>
+        <script type="text/javascript" src="{{ asset("js/jquery.kendocumentor.js") }}"></script>
+        <script src="{{ asset("js/bootstrap.min.js") }}"></script>
+
+    </head>
+    <body>
+        {% block page %}
+            <div class="container-fluid">
+                <div class="navbar navbar-static-top">
+                    <div class="navbar-inner">
+                        <a class="brand" href="#">[风林火山]内容系统</a>
+                        <ul class="nav">
+                            <li class="active"><a href="{{ path("page") }}">Pages</a></li>
+                            <li><a href="#">Link</a></li>
+                            <li><a href="#">Link</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="body" class="row-fluid">     
+                    <div id="sidebar" class="span2">                    
+                    {% block sidebar %}{% endblock %}         
+                        </div>    
+                        <div class="span10">
+                    {% block body %}{% endblock %}
+                            </div>       
+                        </div>
+                        <div id="footer"></div>
+                    </div>
+        {% endblock %}
+        {% block javascripts %}{% endblock %}
+                </body>
+            </html>

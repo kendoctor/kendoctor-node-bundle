@@ -1,0 +1,50 @@
+{% extends 'KendoctorNodeBundle:Page:admin.layout.html.twig' %}
+
+{% block body -%}
+<div id="main_body">
+
+    <style>
+            .blockFocus {  }
+            .focus { border:3px solid brown }
+            input.editingField {width:100%;}
+            textarea.editingField {width:100%;height:300px;}
+
+        </style>
+
+        <script>
+            $(function() {
+
+                $("#doc").kendocumentor({
+                    titleFieldSelector: '#kendoctor_bundle_nodebundle_pagetype_title',
+                    bodyFieldSelector: '#kendoctor_bundle_nodebundle_pagetype_body',
+                    formSelector: '.document-form'
+                });
+            });
+            </script>
+
+            <div id="navigator"></div>
+
+
+            <h1>Page creation</h1>
+
+            <form class="document-form" action="{{ path('page_create') }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+                    <div id="doc">
+
+
+                    </div>
+
+                    <p>
+                        <button type="submit">Create</button>
+                    </p>
+                </form>
+
+                <ul class="record_actions">
+                    <li>
+                        <a href="{{ path('page') }}">
+                            Back to the list
+                        </a>
+                    </li>
+                </ul>
+            </div>
+{% endblock %}

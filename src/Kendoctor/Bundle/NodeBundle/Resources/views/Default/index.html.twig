@@ -2,30 +2,7 @@
 
 
 {% block body %}
-<style>
-#utilnav li a { font-size:10px; }
-#topnav { margin-top:22px }
-html, body { font-family:微软雅黑 }
 
-</style>
-<div id="head">
-    <div id="headContainer" class="container">
-        <ul id="utilnav">
-            <li id="toggle"><a href="">Login</a></li>
-            <li><a href="">Eng</a></li>
-            <li><a href="">中文</a></li>
-        </ul>
-        <ul id="topnav">
-            <li><a href="">首页</a></li>
-            <li><a href="">博客</a></li>
-            <li><a href="">产品</a></li>
-            <li><a href="">技术</a></li>
-            <li><a href="">服务流程</a></li>
-            <li><a href="">关于我们</a></li>
-        </ul>                  
-        <div id="homeclick"></div>
-    </div>
-</div>
 
 <div id="mainBanner">
     <div id="mainBannerContent" class="mainBannerContent_en">
@@ -42,7 +19,7 @@ html, body { font-family:微软雅黑 }
                 <h1 class="page">核心服务</h3>
                 <div class="flag"></div>
                 <ul class="planlist">
-                    <li>SEO 企业营销策划</li>
+                    <li><a href="{{ path("page_show", {id:2}) }}">SEO 企业营销策划</a></li>
                     <li>WEB应用定制开发</li>
                     <li>移动终端应用开发</li>
                 </ul>
@@ -70,9 +47,7 @@ html, body { font-family:微软雅黑 }
         </ul> 
     </div>
 </div>
-<div id="footer">
-    <div id="footercontainer" class="container">Copyright Reserved!</div>
-</div>
+
 {% endblock %}
 
 

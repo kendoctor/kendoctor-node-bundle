@@ -7,13 +7,16 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\Security\Core\SecurityContext;
 
-class DefaultController extends Controller {
+class DefaultController extends Controller
+{
 
     /**
      * @Route("/", name="homepage")
      * @Template()
+     * @return Response or Array
      */
-    public function indexAction() {
+    public function indexAction()
+    {
         $em = $this->getDoctrine()->getManager();
 
         $name = "kendoctor";
@@ -26,6 +29,7 @@ class DefaultController extends Controller {
 
         $em->persist($node);
         $em->flush();
+
 
         //   $securityContext = $this->get('security.context');
         //  $a = new Symfony\Component\Security\Core\SecurityContext();

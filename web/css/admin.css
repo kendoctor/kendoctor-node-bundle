@@ -1,0 +1,23 @@
+/* 
+    Document   : admin.css
+    Created on : May 13, 2013, 2:41:56 AM
+    Author     : Kendoctor
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+#body {
+    zoom:1;
+    clear:both;
+    overflow:hidden;
+}
+#sidebar {
+    float:left;
+    width: 200px;
+}
+
+#main_body {
+    margin-left: 200px;
+}
+

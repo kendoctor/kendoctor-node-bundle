@@ -35,6 +35,10 @@ security:
         login:
             pattern:  ^/login$
             anonymous: ~
+        
+        register:
+            pattern: ^/register$            
+            security: false      
             
         main:
             pattern: ^/

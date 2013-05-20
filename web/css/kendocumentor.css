@@ -1,0 +1,10 @@
+/* 
+    Document   : kendocumentor
+    Created on : 2013-5-19, 19:28:51
+    Author     : kendoctor
+    Description:
+       It's for jquery plugin: kendocumentor
+*/
+
+.kdoc-selected { border:2px solid red; }
+.kdoc-element { cursor: pointer;}
